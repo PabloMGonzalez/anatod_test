@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: navajowhite;
+}
+
+div {
+  padding: 0.5em;
+  border-radius: 6px;
+}
+
+.background {
+  padding: 1.5%;
+  background-color: #ff7171;
+  border-radius: 6px;
+}
+
+.formulario {
+  margin: 4em;
+  width: 23em;
+  background-color: #ff9c71;
+  border-radius: 6px;
+}
+
+form {
+  background-color: #ff7171;
+  padding: 0.5%;
+  text-align: center;
+  border-radius: 6px;
+}
+
+h2 {
+  color: rgb(10, 10, 10);
+  font-size: 1.5em;
+}
+
+input[type="text"],
+[type="number"],
+[type="submit"],
+select {
+  margin: 2%;
+  padding: 6px 6px 6px 4px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+}
+
+.boton {
+  font-size: 15px;
+  border: none;
+}
+.boton:hover {
+  background-color: #af3727;
+  color: white;
+}
+
+.tabla {
+  background: #ff9c71;
+  padding: 9px 9px 9px 9px;
+  border-radius: 6px;
+}
+
+.titulo {
+  padding: 0.7em;
+  border-radius: 6px;
+  color: #ab004c;
+  background-color: #f8fab8;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.data {
+  padding: 0.7em;
+  border-radius: 6px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.data1 {
+  padding: 0.7em;
+  border-radius: 6px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
