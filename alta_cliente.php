@@ -93,7 +93,7 @@ if ($boton==true) {
     <div>
         <div class="formulario">
             <form id="datos" action="alta_cliente.php" method="POST">
-                <h1>Alta Cliente <i class="fas fa-user-clock"></i></h1>
+                <h1>Alta Cliente <i class="fas fa-user-plus"></i></h1>
 
                 <i class="fas fa-signature"></i> <input type="text" class='data1' placeholder="Nombre" name="nombre" id="nombre" value="" maxlength="35"
                     title="Ingrese el nombre" required>

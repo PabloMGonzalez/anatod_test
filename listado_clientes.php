@@ -29,7 +29,7 @@ require_once 'inc/conn.php';
 
 <body>   
     <div class="background">
-        <h1 align="center">Listado de Clientes <i class="fas fa-user-check"></i></h1>
+        <h1 align="center">Listado de Clientes <i class="fas fa-users"></i></h1>
         <table class="tabla">
             <tr>
                 <th class="titulo"><i class="fas fa-fingerprint"></i> ID Cliente</th>

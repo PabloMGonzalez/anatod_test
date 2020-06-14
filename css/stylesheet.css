@@ -16,6 +16,16 @@ div {
   border-radius: 6px;
 }
 
+.grid {
+  padding: 1.5%;
+  background-color: #ff7171;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
 .formulario {
   margin: 4em;
   width: 23em;
