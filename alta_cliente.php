@@ -94,6 +94,6 @@ if ($boton==true) {
 
 </html>
 
-<script src="listado.js">
+<script src="js/listado.js">
 	
 </script> 
