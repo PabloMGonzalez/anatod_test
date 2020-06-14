@@ -71,9 +71,12 @@ if ($boton==true) {
     if (!$rs) {
         print_r($db->errorInfo());  
     } else {
-        header("location:index.php");   
+        echo '<script type="text/javascript">
+        alert("Se ha dado de alta al cliente con exito");
+        
+        </script>';   
     }
-    $rs=null;
+    $rs=null;   
 }
 
 ?>
@@ -89,7 +92,7 @@ if ($boton==true) {
 <body>
     <div>
         <div class="formulario">
-            <form id="datos" action="index.php" method="POST">
+            <form id="datos" action="alta_cliente.php" method="POST">
                 <h1>Alta Cliente <i class="fas fa-user-clock"></i></h1>
 
                 <i class="fas fa-signature"></i> <input type="text" class='data1' placeholder="Nombre" name="nombre" id="nombre" value="" maxlength="35"
@@ -100,8 +103,7 @@ if ($boton==true) {
                     <br>
                 <i class="fas fa-globe-americas"></i><?=$lista_p?>
                     <br>
-                <i class="fas fa-map-marker-alt"></i><?=$lista_l?>               
-
+                <i class="fas fa-map-marker-alt"></i><?=$lista_l?>
                 <input class="boton data1" type="submit" name="enviar" id="enviar" value="Enviar Datos">
 
             </form>

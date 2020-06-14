@@ -91,7 +91,10 @@ if ($boton==true) {
     if (!$rs) {
         print_r($db->errorInfo());  #desarrollo
     } else {
-        header("location modificar_cliente.php");
+        echo '<script type="text/javascript">
+        alert("Se ha modificado el cliente con exito");
+        window.location.href="index.php";
+        </script>';  
     }
     $rs=null;
 }
@@ -121,7 +124,7 @@ if ($btn_buscar==true) {
                 lista_localidades($lista_l, $nombre_localidad);             
                 break;
             }          
-        }            
+        }              
     } 
 }
 
