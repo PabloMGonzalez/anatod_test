@@ -73,7 +73,7 @@ if ($boton==true) {
     } else {
         echo '<script type="text/javascript">
         alert("Se ha dado de alta al cliente con exito");
-        
+        window.location.href="index.php";
         </script>';   
     }
     $rs=null;   
