@@ -25,7 +25,7 @@ function inicializar_vars() {
 function lista_provincias(&$lista_p, &$nombre_provincia) {
     global $db;  
     $lista_p =  "<select class='data1' id='provincia' name='provincia'>".
-                "<option value=0>Seleccione una Provincia</option>";
+                "<option disabled value=0>Seleccione una Provincia</option>";
     $sql = "SELECT * 
                 FROM provincias 
             ORDER BY provincia_nombre";
@@ -38,25 +38,7 @@ function lista_provincias(&$lista_p, &$nombre_provincia) {
     $rs=null;
 }
 
-//crea una lista en el SELECT de todas las localidades
-function lista_localidades(&$lista_l, &$nombre_localidad) {
-    global $db;
-    $lista_l =  "<select class='data1' id='localidad' name='localidad'>".
-                "<option disabled selected>Seleccione una Localidad</option>";
-    $sql  = "SELECT * 
-                FROM localidades           
-            ORDER BY localidad_nombre";
-    $rs = $db->query($sql);
-
-    foreach ($rs as $row) {        
-            $lista_l .= "<option value='{$row['localidad_id']}'>".($row['localidad_nombre'])."</option>";
-        }     
-    $lista_l .= "</select>";
-    $rs=null;
-}
-
 lista_provincias($lista_p,$nombre_provincia);
-lista_localidades($lista_l, $nombre_localidad);
 inicializar_vars();
 recuperar_datos();
 
@@ -78,14 +60,14 @@ if ($boton==true) {
     }
     $rs=null;   
 }
-
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css">
-    <script src="https://kit.fontawesome.com/1afd94d30f.js" crossorigin="anonymous"></script>    
+    <script src="https://kit.fontawesome.com/1afd94d30f.js" crossorigin="anonymous"></script>   
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> 
     <title>Alta Cliente</title>
 </head>
 
@@ -94,7 +76,6 @@ if ($boton==true) {
         <div class="formulario">
             <form id="datos" action="alta_cliente.php" method="POST">
                 <h1>Alta Cliente <i class="fas fa-user-plus"></i></h1>
-
                 <i class="fas fa-signature"></i> <input type="text" class='data1' placeholder="Nombre" name="nombre" id="nombre" value="" maxlength="35"
                     title="Ingrese el nombre" required>
                     <br>
@@ -103,7 +84,7 @@ if ($boton==true) {
                     <br>
                 <i class="fas fa-globe-americas"></i><?=$lista_p?>
                     <br>
-                <i class="fas fa-map-marker-alt"></i><?=$lista_l?>
+                <i class="fas fa-map-marker-alt"></i><select class='data1' id="localidad" name="localidad"></select>                
                 <input class="boton data1" type="submit" name="enviar" id="enviar" value="Enviar Datos">
 
             </form>
@@ -112,3 +93,7 @@ if ($boton==true) {
 </body>
 
 </html>
+
+<script src="listado.js">
+	
+</script> 

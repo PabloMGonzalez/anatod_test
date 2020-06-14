@@ -91,10 +91,10 @@ if ($boton==true) {
     if (!$rs) {
         print_r($db->errorInfo());  #desarrollo
     } else {
-        echo '<script type="text/javascript">
+         echo '<script type="text/javascript">
         alert("Se ha modificado el cliente con exito");
         window.location.href="index.php";
-        </script>';  
+        </script>';       
     }
     $rs=null;
 }
